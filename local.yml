@@ -1,0 +1,29 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:17.2
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=local_password
+    ports:
+      - "5432:5432"
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.13.7-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=local_user
+      - RABBITMQ_DEFAULT_PASS=local_password
+    ports:
+      - "15672:15672"
+
+  celery:
+    environment:
+      - DJANGO_SETTINGS_MODULE=mysite.settings
+      - REMAP_SIGTERM=SIGQUIT
+    init: true
+    container_name: celery
+    image: celery_cold_shutdown
+    depends_on:
+      - rabbitmq
+    command: celery -A mysite worker -l INFO -n celery -c 1 -P prefork -Q celery --without-heartbeat --without-mingle --without-gossip

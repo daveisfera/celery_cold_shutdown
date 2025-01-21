@@ -127,21 +127,6 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("PA_POSTGRES_DBNAME", "celery_cold_shutdown"),
-        "HOST": os.environ.get("PA_POSTGRES_HOST", "postgres"),
-        "PORT": os.environ.get("PA_POSTGRES_PORT", "5432"),
-        "USER": os.environ.get("PA_POSTGRES_USERNAME", "local_user"),
-        "PASSWORD": os.environ.get("PA_POSTGRES_PASSWORD", "local_password"),
-        "CONN_MAX_AGE": 60 * 60,
-        "OPTIONS": {
-            "application_name": "celery_cold_shutdown",
-        },
-    }
-}
-
 CELERY_BROKER_URL = "{}://{}:{}@{}:{}//".format(
     os.environ.get("PA_RABBITMQ_PROTOCOL", "amqp"),
     os.environ.get("PA_RABBITMQ_USER", "local_user"),

@@ -1,13 +1,4 @@
 services:
-  postgres:
-    container_name: postgres
-    image: postgres:17.2
-    environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=local_password
-    ports:
-      - "5432:5432"
-
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:3.13.7-management
@@ -27,3 +18,5 @@ services:
     depends_on:
       - rabbitmq
     command: celery -A mysite worker -l INFO -n celery -c 1 -P prefork -Q celery --without-heartbeat --without-mingle --without-gossip
+    volumes:
+      - ./db.sqlite3:/usr/src/app/db.sqlite3

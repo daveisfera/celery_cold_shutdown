@@ -25,7 +25,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4.6.1
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: celery_cold_shutdown
           path: ${{ runner.temp }}/celery_cold_shutdown.tar

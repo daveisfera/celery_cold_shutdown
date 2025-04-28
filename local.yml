@@ -1,6 +1,6 @@
 services:
-  rabbitmq:
-    container_name: rabbitmq
+  rabbitmq_cold_shutdown:
+    container_name: rabbitmq_cold_shutdown
     image: rabbitmq:3.13.7-management
     environment:
       - RABBITMQ_DEFAULT_USER=local_user
@@ -8,15 +8,15 @@ services:
     ports:
       - "15672:15672"
 
-  celery:
+  celery_cold_shutdown:
+    container_name: celery_cold_shutdown
+    image: celery_cold_shutdown
     environment:
       - DJANGO_SETTINGS_MODULE=mysite.settings
       - REMAP_SIGTERM=SIGQUIT
     init: true
-    container_name: celery
-    image: celery_cold_shutdown
     depends_on:
-      - rabbitmq
+      - rabbitmq_cold_shutdown
     command: celery -A mysite worker -l INFO -n celery -c 1 -P prefork -Q celery --without-heartbeat --without-mingle --without-gossip
     volumes:
       - ./db.sqlite3:/usr/src/app/db.sqlite3

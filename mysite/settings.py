@@ -131,7 +131,7 @@ CELERY_BROKER_URL = "{}://{}:{}@{}:{}//".format(
     os.environ.get("PA_RABBITMQ_PROTOCOL", "amqp"),
     os.environ.get("PA_RABBITMQ_USER", "local_user"),
     os.environ.get("PA_RABBITMQ_PASSWORD", "local_password"),
-    os.environ.get("PA_RABBITMQ_HOST", "rabbitmq"),
+    os.environ.get("PA_RABBITMQ_HOST", "rabbitmq_cold_shutdown"),
     os.environ.get("PA_RABBITMQ_PORT", "5672"),
 )
 

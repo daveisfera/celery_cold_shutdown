@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-docker exec celery python3 manage.py migrate
+docker exec celery_cold_shutdown python3 manage.py migrate

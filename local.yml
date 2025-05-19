@@ -19,4 +19,4 @@ services:
       - rabbitmq_cold_shutdown
     command: celery -A mysite worker -l INFO -n celery -c 1 -P prefork -Q celery --without-heartbeat --without-mingle --without-gossip
     volumes:
-      - ./db.sqlite3:/usr/src/app/db.sqlite3
+      - .:/usr/src/app/

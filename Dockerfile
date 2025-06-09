@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:1.5
-FROM python:3.9.22-slim-bookworm
+FROM python:3.9.23-slim-bookworm
 
 WORKDIR /usr/src/app
 

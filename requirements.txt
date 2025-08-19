@@ -16,8 +16,8 @@ billiard==4.2.1 \
     --hash=sha256:12b641b0c539073fc8d3f5b8b7be998956665c4233c7c1fcd66a7e677c4fb36f \
     --hash=sha256:40b59a4ac8806ba2c2369ea98d876bc6108b051c227baffd928c644d15d8f3cb
     # via celery
-celery @ https://github.com/celery/celery/archive/ab723110d8ba684e7f6864066cab150dc861c4e4.tar.gz \
-    --hash=sha256:944b78b548be71af452f17a6c4a6f8bc6bc14b986575f33ff5abe378dbb4c6b6
+celery @ https://github.com/celery/celery/archive/75d376825d435fd9cdfe1d472e248f590125037b.tar.gz \
+    --hash=sha256:bef783cd9dc68e4924af08a176552358dc888cb5ddeafb8e2dd7fe3b39260e61
     # via
     #   -r requirements.in
     #   django-celery-results
@@ -51,9 +51,9 @@ django-celery-results==2.6.0 \
     --hash=sha256:9abcd836ae6b61063779244d8887a88fe80bbfaba143df36d3cb07034671277c \
     --hash=sha256:b9ccdca2695b98c7cbbb8dea742311ba9a92773d71d7b4944a676e69a7df1c73
     # via -r requirements.in
-kombu==5.5.4 \
-    --hash=sha256:886600168275ebeada93b888e831352fe578168342f0d1d5833d88ba0d847363 \
-    --hash=sha256:a12ed0557c238897d8e518f1d1fdf84bd1516c5e305af2dacd85c2015115feb8
+kombu==5.6.0b2 \
+    --hash=sha256:46efd72b639e230204d931f5c683304fcf64d819c1b243fa94de4cc5606e6a19 \
+    --hash=sha256:f3d952fc581dbb8cc4cc880ac56ec374c02b93e2e22e02f2984aefb1f8480367
     # via celery
 packaging==25.0 \
     --hash=sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484 \

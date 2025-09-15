@@ -16,8 +16,8 @@ billiard==4.2.1 \
     --hash=sha256:12b641b0c539073fc8d3f5b8b7be998956665c4233c7c1fcd66a7e677c4fb36f \
     --hash=sha256:40b59a4ac8806ba2c2369ea98d876bc6108b051c227baffd928c644d15d8f3cb
     # via celery
-celery @ https://github.com/celery/celery/archive/75d376825d435fd9cdfe1d472e248f590125037b.tar.gz \
-    --hash=sha256:bef783cd9dc68e4924af08a176552358dc888cb5ddeafb8e2dd7fe3b39260e61
+celery @ https://github.com/celery/celery/archive/816e5829962bdd6f84ce00a63df8c0550676e0e1.tar.gz \
+    --hash=sha256:2a9ee2cf9beec77b1e080e88d763d41c28da319faf3e92ed00286d750eb1c536
     # via
     #   -r requirements.in
     #   django-celery-results

@@ -1,4 +1,4 @@
-celery @ https://github.com/celery/celery/archive/75d376825d435fd9cdfe1d472e248f590125037b.tar.gz
+celery @ https://github.com/celery/celery/archive/816e5829962bdd6f84ce00a63df8c0550676e0e1.tar.gz
 django~=4.2.19
 django-celery-results~=2.6.0
 psycopg2~=2.9.0

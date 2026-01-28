@@ -3,4 +3,4 @@
 docker compose \
   --project-name celery_cold_shutdown \
   -f local.yml \
-  up -d --always-recreate-deps
+  up -d --always-recreate-deps --no-build
